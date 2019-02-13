@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       console.log("ggggg", res.radios);
     });
   }
-  onSelectChannelHandler(id: any) {
+  onSelectChannelHandler(id: any): void {
     const CloneState = [...this.radios];
     const checkIsOpen = CloneState.map((item, index) =>
       id === index ? { ...item, isOpen: true } : { ...item, isOpen: false }
@@ -26,7 +26,8 @@ export class AppComponent implements OnInit {
     this.radios = checkIsOpen;
   }
 
-  onturnOffHandler() {
+  onturnOffHandler(): void {
+    console.log("ggggggggggggggggggggggg");
     const CloneState = [...this.radios];
     const setIsOpenToFalse = CloneState.map(item => {
       return { ...item, isOpen: false };

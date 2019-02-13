@@ -1,5 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="App">
-  <app-station></app-station>
-  <app-channel></app-channel>
+  <app-station (onturnOffHandler)="onturnOffHandler($event)"></app-station>
+  <app-channel
+    *ngFor="let radio of radios; let i = index"
+    [radio]="radio"
+    [index]="i"
+    (onSelectChannelHandler)="onSelectChannelHandler($event)"
+  ></app-channel>
+  <app-spinner *ngIf="!radios"></app-spinner>
 </div>

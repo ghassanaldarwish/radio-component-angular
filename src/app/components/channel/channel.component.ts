@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from "@angular/core";
 
 @Component({
-  selector: 'app-channel',
-  templateUrl: './channel.component.html',
-  styleUrls: ['./channel.component.scss']
+  selector: "app-channel",
+  templateUrl: "./channel.component.html",
+  styleUrls: ["./channel.component.scss"]
 })
 export class ChannelComponent implements OnInit {
+  @Input() radio: any;
+  @Input() index: any;
+  @Output() onSelectChannelHandler: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  onSelectChannel(id) {
+    this.onSelectChannelHandler.emit(id);
   }
 
+  constructor() {}
+
+  ngOnInit() {}
 }
