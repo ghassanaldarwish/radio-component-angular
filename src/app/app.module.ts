@@ -1,16 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { StationComponent } from "./components/station/station.component";
+import { ChannelComponent } from "./components/channel/channel.component";
+import { SpinnerComponent } from "./components/spinner/spinner.component";
+import { ChannelDetailsComponent } from "./components/Channel/channel-details/channel-details.component";
+import { FooterComponent } from "./components/Channel/footer/footer.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StationComponent,
+    ChannelComponent,
+    SpinnerComponent,
+    ChannelDetailsComponent,
+    FooterComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
