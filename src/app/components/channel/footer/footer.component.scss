@@ -1,3 +1,5 @@
+$radius: 25px;
+
 .Footer {
   background: #2a2a34;
   border-top: 1px solid #42424c;
@@ -5,23 +7,20 @@
   position: absolute;
   padding: 10px 0;
   bottom: 0;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-
-.Footer p {
-  margin: 0 !important;
-  text-align: center;
-}
-
-.Footer p:first-child {
-  color: #e7ae6b;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.Footer p:last-child {
-  font-size: 20px;
-  color: #a0a6bc;
-  text-transform: capitalize;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  p {
+    margin: 0 !important;
+    text-align: center;
+    &:first-child {
+      color: #e7ae6b;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      font-size: 20px;
+      color: #a0a6bc;
+      text-transform: capitalize;
+    }
+  }
 }

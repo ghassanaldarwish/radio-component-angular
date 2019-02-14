@@ -1,16 +1,17 @@
+$radius: 25px;
+
 .Station {
   display: flex;
   justify-content: space-around;
   height: 40px;
   background: #edae61;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
   padding-top: 18px;
-}
-
-.StationText {
-  margin: 0;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
+  .StationText {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
