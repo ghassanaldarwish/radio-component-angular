@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "r-a": "radio-component-angular",
+    "default": "radio-component-angular"
+  }
+}
